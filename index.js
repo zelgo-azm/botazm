@@ -1,3 +1,14 @@
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Bot AZM działa');
+});
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Port aktywny');
+});
+
 const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 
 const client = new Client({
@@ -20,12 +31,11 @@ client.once('ready', () => {
 client.on('guildMemberAdd', member => {
     const channel = member.guild.channels.cache.get(CHANNEL_ID);
 
-    if (channel) {
-        channel.send(
-            `🔥 Witaj ${member} jesteś ${member.guild.memberCount} duszą w Czeluści Klanu AZM! 🔥`
-        );
-    }
+    if (!channel) return;
+
+    channel.send(
+        `🔥 Witaj ${member} jesteś ${member.guild.memberCount} duszą w Czeluści Klanu AZM! 🔥`
+    );
 });
 
-// 🔥 TOKEN Z ENV (Render / .env lokalnie)
 client.login(process.env.TOKEN);
