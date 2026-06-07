@@ -7,7 +7,6 @@ const client = new Client({
     ]
 });
 
-const TOKEN = '';
 const CHANNEL_ID = '1315633892266348606';
 
 client.once('ready', () => {
@@ -26,5 +25,4 @@ client.on('guildMemberAdd', member => {
     }
 });
 
-client.login(TOKEN);
-
+client.login(process.env.TOKEN);
