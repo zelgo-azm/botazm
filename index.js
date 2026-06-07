@@ -1,6 +1,4 @@
-console.log("START BOT FILE");
-console.log("TOKEN EXISTS:", !!process.env.TOKEN);
-console.log("TOKEN LENGTH:", process.env.TOKEN?.length);
+console.log("🔥 BOT FILE STARTED");
 
 const { Client, GatewayIntentBits } = require('discord.js');
 
@@ -11,9 +9,7 @@ const client = new Client({
     ]
 });
 
-console.log("TOKEN LENGTH:", process.env.TOKEN?.length);
-console.log("TOKEN EXISTS:", !!process.env.TOKEN);
-
+const TOKEN = 'MTExNTM1Nzc5OTU1NjMyOTUyNQ.GR0adA.3ywyVWbXlVE9doL8SNLeptEMrDIlS3n-Usnx0E';
 const CHANNEL_ID = '1315633892266348606';
 
 client.once('ready', () => {
@@ -32,4 +28,5 @@ client.on('guildMemberAdd', member => {
     }
 });
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);
+
