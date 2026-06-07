@@ -10,7 +10,7 @@ const client = new Client({
 const CHANNEL_ID = '1315633892266348606';
 
 client.once('ready', () => {
-    console.log(Bot uruchomiony jako ${client.user.tag});
+    console.log(`Bot uruchomiony jako ${client.user.tag}`);
 
     client.user.setActivity('Włada Grzechem', {
         type: ActivityType.Playing
@@ -22,7 +22,7 @@ client.on('guildMemberAdd', async (member) => {
     if (!channel) return;
 
     channel.send(
-        🔥 Witaj ${member} 👋 Jesteś ${member.guild.memberCount} potępionym w Czeluści Klanu AZM! 🔥
+        `🔥 Witaj ${member} 👋 Jesteś ${member.guild.memberCount} potępionym w Czeluści Klanu AZM! 🔥`
     );
 });
 
