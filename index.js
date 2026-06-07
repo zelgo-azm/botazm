@@ -34,7 +34,7 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
 
     channel.send(
-        `🔥 Witaj ${member} jesteś ${member.guild.memberCount} duszą w Czeluści Klanu AZM! 🔥`
+        `🔥 Witaj ${member} 👋 Jesteś ${member.guild.memberCount} potępieńcem pochłoniętym przez Czeluść Klanu AZM! 🔥`
     );
 });
 
