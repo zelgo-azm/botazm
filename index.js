@@ -12,7 +12,7 @@ const CHANNEL_ID = '1315633892266348606';
 client.once('ready', () => {
     console.log(`Bot uruchomiony jako ${client.user.tag}`);
 
-    client.user.setActivity('Władca Grzechu', {
+    client.user.setActivity('Włada Grzechem', {
         type: ActivityType.Playing
     });
 });
