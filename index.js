@@ -1,3 +1,7 @@
+console.log("START BOT FILE");
+console.log("TOKEN EXISTS:", !!process.env.TOKEN);
+console.log("TOKEN LENGTH:", process.env.TOKEN?.length);
+
 const { Client, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
