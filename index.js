@@ -7,6 +7,9 @@ const client = new Client({
     ]
 });
 
+console.log("TOKEN LENGTH:", process.env.TOKEN?.length);
+console.log("TOKEN EXISTS:", !!process.env.TOKEN);
+
 const CHANNEL_ID = '1315633892266348606';
 
 client.once('ready', () => {
